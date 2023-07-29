@@ -14,11 +14,17 @@ async function Links() {
           <p>${links[i].id}</p>
         </div>
       </div>
-      <div class="percent">${links[i].price_change_percentage_24h + "%"}</div>
-      <div class="price">${"$" + links[i].current_price}</div>
+      <div id="percent" class="percent">${
+        links[i].price_change_percentage_24h + "%"
+      }</div>
+      
+      <div class="price">${"₹ " + links[i].current_price}</div>
       <p class="text">Total Volume: ${links[i].total_volume}</p>
       <p class="text">Market Cap: ${links[i].market_cap}</p>
     </div>`;
+
+    if (links[i].price_change_percentage_24h < 0) {
+    }
   }
 
   let contentList = document.querySelector(".list-box");
@@ -37,7 +43,7 @@ async function Links() {
           links[i].price_change_percentage_24h + "%"
         }</div>
       </td>
-      <td><div class="price">${"$" + links[i].current_price}</div>
+      <td><div class="price">${"₹ " + links[i].current_price}</div>
       </td>
         <td><p class="texts">Total Volume: ${links[i].total_volume}</p>
       </td>
@@ -47,10 +53,11 @@ async function Links() {
     </td>
     </tr>`;
   }
-
-  if (links[i].price_change_percentage_24h < 0) {
-    document.getElementById("percent").style.color = "red";
-  }
+  // const list_price = document.getElementById(`percent`);
+  // const list_change = document.getElementById(``);
+  // if (links[i].price_change_percentage_24h < 0) {
+  //   document.getElementById("percent").style.color = "red";
+  // }
 }
 
 const tabs = document.querySelectorAll(".tab-btn");
