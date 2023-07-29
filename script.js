@@ -33,7 +33,7 @@ async function Links() {
           <p>${links[i].id}</p>
         </div></td>
         <td>
-        <div class="percents">${
+        <div id="percent" class="percents">${
           links[i].price_change_percentage_24h + "%"
         }</div>
       </td>
@@ -48,9 +48,9 @@ async function Links() {
     </tr>`;
   }
 
-  // if (links[i].price_change_percentage_24h < 0) {
-  //   // document.getElementsByClassName("percent").style.color = "red";
-  // }
+  if (links[i].price_change_percentage_24h < 0) {
+    document.getElementById("percent").style.color = "red";
+  }
 }
 
 const tabs = document.querySelectorAll(".tab-btn");

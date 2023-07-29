@@ -4,6 +4,7 @@
   padding: 0%;
   font-family: "Quattrocento", serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 :root {
   --main-color: #4a80e2;
@@ -80,8 +81,7 @@ nav ul li:nth-child(5) {
   transform: scale(0.8);
 }
 .grid-box {
-  /* background-color: white; */
-  transition: all 0.6s linear;
+  transition: all 0.6s ease;
   height: 100%;
   width: 100%;
   padding: 40px;
@@ -144,7 +144,8 @@ nav ul li:nth-child(5) {
   align-self: center;
 }
 .list-box {
-  transition: all 0.6s linear;
+  transition: all 0.3s linear;
+  padding: 0px 80px;
 }
 table {
   width: 100%;
