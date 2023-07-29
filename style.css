@@ -98,8 +98,8 @@ nav ul li:nth-child(5) {
 .title {
   display: flex;
   align-items: center;
-  justify-content: start;
-  gap: 10px;
+  justify-content: space-evenly;
+  gap: 20px;
 }
 .title p {
   color: grey;
@@ -129,11 +129,7 @@ nav ul li:nth-child(5) {
 .contents.active {
   display: block;
 }
-.list-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
+
 .percents {
   color: green;
   padding: 8px;
@@ -143,4 +139,10 @@ nav ul li:nth-child(5) {
 }
 .texts {
   color: grey;
+}
+.contentt {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
 }
