@@ -24,6 +24,10 @@ async function Links() {
     </div>`;
 
     if (links[i].price_change_percentage_24h < 0) {
+      document.getElementsByClassName("percent")[i].style.color = "red";
+      document.getElementsByClassName("price")[i].style.color = "red";
+      document.getElementsByClassName("percent")[i].style.border =
+        "2px solid red";
     }
   }
 
@@ -53,11 +57,12 @@ async function Links() {
     </td>
     </tr>`;
   }
-  // const list_price = document.getElementById(`percent`);
-  // const list_change = document.getElementById(``);
-  // if (links[i].price_change_percentage_24h < 0) {
-  //   document.getElementById("percent").style.color = "red";
-  // }
+  if (links[i].price_change_percentage_24h < 0) {
+    document.getElementsByClassName("percents")[i].style.color = "red";
+    document.getElementsByClassName("price")[i].style.color = "red";
+    document.getElementsByClassName("percents")[i].style.border =
+      "2px solid red";
+  }
 }
 
 const tabs = document.querySelectorAll(".tab-btn");
