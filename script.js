@@ -57,7 +57,7 @@ async function Links() {
     </td>
     </tr>`;
 
-    if (links[i].price_change_percentage_24h > 0) {
+    if (links[i].price_change_percentage_24h < 0) {
       document.getElementsByClassName("percents")[i].style.color = "red";
       document.getElementsByClassName("price")[i].style.color = "red";
       document.getElementsByClassName("percents")[i].style.border =
