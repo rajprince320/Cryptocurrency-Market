@@ -10,7 +10,7 @@ async function Links() {
       <div class="title">
         <img width="50px" src="${links[i].image}"/>
         <div>
-          <h3>${links[i].name}</h3>
+          <h4>${links[i].name}</h4>
           <p>${links[i].id}</p>
         </div>
       </div>
